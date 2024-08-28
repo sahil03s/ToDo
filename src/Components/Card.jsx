@@ -14,7 +14,7 @@ export default function Card({data, onEdit})
                 ...data,
                 completed : !data.completed
             })}}/>
-            <p className="text-sm font-medium max-w-72">
+            <p className="text-sm font-medium max-w-auto mr-3 max-w-60 sm:max-w-72">
             {data.todo}
             </p>
             <EditIcon className='max-w-9 absolute mr-4 right-3' onClick={() =>onEdit(data)}/>
