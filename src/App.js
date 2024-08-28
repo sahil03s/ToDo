@@ -3,6 +3,7 @@ import { useEffect, useReducer, createContext } from 'react';
 import axios from 'axios';
 import Header from './Components/Header';
 import Body from './Components/Body';
+import Footer from './Components/Footer';
 import { Toaster, toast } from 'react-hot-toast';
 
 const notify = (message) => toast.error(message);
@@ -95,6 +96,7 @@ function App() {
     <Toaster/>
       <Header/>
       <Body/>
+      <Footer/>
     </context.Provider>
     </>
   );
