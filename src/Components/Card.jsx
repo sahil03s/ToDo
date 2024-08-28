@@ -9,7 +9,7 @@ export default function Card({data, onEdit})
 {
     const {deleteTodo, updateItem} = useContext(context);
     return (
-        <div className="relative flex items-center mt-10 card box-border min-h-max max-w-96 border-2 m-auto rounded-md outline-2 shadow-2xl">
+        <div className="relative flex items-center mt-10 m-auto card box-border min-h-max max-w-96 border-2 rounded-md outline-2 shadow-2xl">
             <Checkbox className='max-w-9' checked={data.completed} onClick={() => {updateItem({
                 ...data,
                 completed : !data.completed

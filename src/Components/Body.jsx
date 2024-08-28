@@ -49,7 +49,7 @@ export default function Body()
     }
 
     return (
-        <div className='pt-2'>
+        <div className='pt-2 px-3'>
             <div className='flex justify-between items-center m-auto mt-32 bg-white box-border min-h-max max-w-96 border-2 outline-2 shadow-2xl rounded-md'>
                 <input className='min-w-8 h-5' type='checkbox' name='completed' checked={newTodo.completed} onChange={handleChange}></input>
                 <textarea 
