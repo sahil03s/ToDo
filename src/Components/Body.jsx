@@ -49,10 +49,9 @@ export default function Body()
     }
 
     return (
-        <>
-            <div className='flex justify-between items-center m-auto mt-6 bg-white box-border min-h-max max-w-96 border-2 outline-2 shadow-2xl rounded-md'>
+        <div className='pt-2'>
+            <div className='flex justify-between items-center m-auto mt-32 bg-white box-border min-h-max max-w-96 border-2 outline-2 shadow-2xl rounded-md'>
                 <input className='min-w-8 h-5' type='checkbox' name='completed' checked={newTodo.completed} onChange={handleChange}></input>
-                
                 <textarea 
                 className='min-w-80 min-h-8 resize-none outline-transparent focus:border-b-2 border-black overflow-hidden   ' 
                 type='text' 
@@ -68,11 +67,15 @@ export default function Body()
                 ? <SendSharpIcon onClick={save}/> 
                 : <AddIcon className='h-5' onClick={save}/> }
             </div>
+
             {todoList.loading 
             ? <div className='my-36'>   
                 <Loader type='spinner-circle' bgColor='#BFA181'/>
             </div>
-            : todos.filter((ele) => !ele.isDeleted).map((ele) =><Card key={ele.id} data={ele} onEdit={edit}/>)}
-        </>
+            : <div className='cards-container mt-4'>
+             {todos.filter((ele) => !ele.isDeleted).map((ele) =><Card key={ele.id} data={ele} onEdit={edit}/>)}
+            </div>
+            }
+        </div>
     );
 }

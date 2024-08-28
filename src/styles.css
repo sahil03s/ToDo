@@ -1,3 +1,7 @@
+.header {
+    background-color: #0A1828;
+}
+
 .card {
     color: #fff;
     background-color:#cc9800;
@@ -5,4 +9,18 @@
 
 .container{
     color: #BFA181
+}
+
+.credits {
+    color: white;
+}
+
+.credits a {
+    color: rgb(67, 67, 241);
+    text-decoration: underline;
+}
+
+.credits span {
+    color: #BFA181
+
 }
